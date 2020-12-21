@@ -1,16 +1,14 @@
 package com.everis.webmoto;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class CT_009 {
+public class CT_011 {
 
 	static WebDriver driver;
 
@@ -22,22 +20,21 @@ public class CT_009 {
 	}
 
 	@Test
-	public void testMenu() {
-
-		String[] menu = { "Comprar", "Vender", "Serviços", "Ajuda", "Entrar" };
-		for (String elementos : menu) {
-			assertTrue(driver.getPageSource().contains(elementos));
-
-		}
+	public void menuClickCampos() {
+		By campoCompra = By.xpath("//*[@id=\"root\"]/header/nav/div/ul/li[1]");
+		WebElement pesquisa = driver.findElement(campoCompra);
+		pesquisa.click();
 		
+		By campovender = By.xpath("//*[@id=\"root\"]/header/nav/div/ul/li[2]");
+		WebElement pesquisaVenda = driver.findElement(campovender);
+		pesquisaVenda.click();
 
 	}
 
 	@AfterClass
-	public static void quitCloseDriver() throws InterruptedException {
+	public static void quitDriver() throws InterruptedException {
 		Thread.sleep(5000);
 		driver.close();
 		driver.quit();
 	}
-
 }

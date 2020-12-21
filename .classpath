@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="cursoSelenium/exemploSelenium/src/main/java"/>
+	<classpathentry kind="src" path="cursoSelenium/exemploSelenium/src/test/java"/>
+	<classpathentry kind="output" path="cursoSelenium/exemploSelenium/target/classes"/>
+</classpath>
